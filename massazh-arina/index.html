@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BadiCo – массаж и кедровая бочка в Солнечном городе, СПб</title>
@@ -40,16 +40,15 @@
       </ul>
     </div>
     <figure class="hero__photo">
-      <!-- Фото: Unsplash (бесплатная лицензия). Лучше потом заменить на своё фото Арины за работой -->
+      <!-- Фото: Unsplash (бесплатная лицензия), хранится в папке сайта. Лучше потом заменить на своё фото Арины за работой -->
       <img
-        src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=70"
-        srcset="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=70 600w,
-                https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=70 900w,
-                https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1300&q=70 1300w"
+        src="img/massazh-ruki-1200.jpg"
+        srcset="img/massazh-ruki-700.jpg 700w, img/massazh-ruki-1200.jpg 1200w"
         sizes="(min-width: 1024px) 50vw, 100vw"
-        width="900" height="1350"
+        width="1200" height="1800"
         alt="Женщина лежит на массажном столе, руки мастера массируют ей спину"
-        fetchpriority="high">    </figure>
+        fetchpriority="high">
+    </figure>
   </section>
 
   <!-- Услуги и цены -->
