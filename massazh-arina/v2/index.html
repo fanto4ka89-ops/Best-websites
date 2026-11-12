@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Арина – массаж и кедровая бочка в Солнечном городе, СПб</title>
+  <meta name="description" content="Классический, расслабляющий, баночный массаж, кедровая бочка и спа-уход у мастера Арины. Проспект Ветеранов, 169к6, ЖК «Солнечный город», Санкт-Петербург. Каждый день 10:00–21:00. Скидка 10% на первый визит.">
+  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Шапка газеты -->
+<header class="bar">
+  <span class="bar__city">Санкт-Петербург, Солнечный город</span>
+  <a class="bar__logo" href="#">Газета «Арина»</a>
+  <a class="bar__cta" href="#zapis">Записаться</a>
+</header>
+
+<main>
+
+  <!-- Лента «в номере» -->
+  <div class="strip">
+    <p class="strip__intro"><b>В номере!</b> Массаж, кедровая бочка и спа – всё в одном кабинете.</p>
+    <a class="strip__item" href="#ceny">
+      <img src="../img/kabinet-bochka.jpg" width="827" height="1080" alt="Кедровая бочка рядом с массажными столами">
+      <span class="strip__title">Кедровая бочка <i class="tag">хит</i></span>
+      <span class="strip__text">Мини-сауна из кедра с паром на травах. Голова – снаружи, дышится легко.</span>
+    </a>
+    <a class="strip__item" href="#ceny">
+      <img src="../img/massazhnyj-stol.jpg" width="827" height="1098" alt="Массажный стол с полотенцами">
+      <span class="strip__title">Массаж</span>
+      <span class="strip__text">Классический, расслабляющий, баночный и спортивный – от 45 минут.</span>
+    </a>
+    <a class="strip__item" href="#ceny">
+      <img src="../img/stol-bochki.jpg" width="827" height="1093" alt="Масла, свечи и веники для спа-процедур">
+      <span class="strip__title">Спа-уход</span>
+      <span class="strip__text">Скраб, обёртывание, термоодеяло, уход для лица, рук и ног.</span>
+    </a>
+  </div>
+
+  <!-- Главное имя -->
+  <h1 class="mast"><span class="mast__word">Арина</span><span class="sr">– массаж и спа в Солнечном городе</span></h1>
+
+  <!-- Первый разворот -->
+  <section class="spread">
+    <div class="spread__side">
+      <p class="huge huge--left">Массаж<br>и спа!</p>
+      <img class="spread__small" src="../img/arina.jpg" width="826" height="1089" alt="Арина делает массаж ног перкуссионным массажёром">
+      <p class="lead dropcap">Я массажист с 2017 года. Начинала тренером по растяжке и поняла, что больше всего хочу работать руками и помогать людям расслабиться. Выслушаю, что беспокоит, и подберу темп – сильнее или мягче.</p>
+    </div>
+    <div class="spread__main">
+      <img class="spread__big" src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1100&h=760&q=70" width="1100" height="760" alt="Руки мастера массируют спину женщины на массажном столе" fetchpriority="high">
+      <ul class="services">
+        <li>Классический массаж</li>
+        <li>Кедровая бочка</li>
+        <li>Обёртывание и скраб</li>
+        <li>В Солнечном городе, СПб.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Прайс -->
+  <section class="price" id="ceny">
+    <div class="price__head">
+      <h2 class="box">Прайс</h2>
+      <div class="stamp" aria-label="Скидка 10% на первый визит">
+        <svg viewBox="0 0 100 50" aria-hidden="true"><g stroke="#ec7a3c" stroke-width="3" stroke-linecap="round"><path d="M50 48V8M50 48 22 14M50 48 78 14M50 48 8 30M50 48l42-18M50 48 34 9M50 48l16-39"/></g></svg>
+        <b>−10%</b>
+        <span>на первый визит</span>
+      </div>
+    </div>
+
+    <div class="price__cols">
+      <div class="price__group">
+        <h3 class="kicker">Массаж</h3>
+        <dl class="list">
+          <div><dt>Классический массаж <i>60 мин</i></dt><dd>4 000 ₽</dd></div>
+          <div><dt>Расслабляющий массаж <i>60 мин</i></dt><dd>3 500 ₽</dd></div>
+          <div><dt>Баночный массаж <i>45 мин</i></dt><dd>4 000 ₽</dd></div>
+          <!-- ЗАГЛУШКА: уточнить цену спортивного массажа -->
+          <div><dt>Спортивный массаж <i>60 мин</i></dt><dd class="ask">уточняйте</dd></div>
+          <div><dt>Стоун-терапия <i>15 мин</i></dt><dd>1 100 ₽</dd></div>
+        </dl>
+        <p class="note">Можно взять сеанс на 2 часа – многие так и делают.</p>
+      </div>
+      <div class="price__group">
+        <h3 class="kicker">Спа-уход</h3>
+        <dl class="list">
+          <div><dt>Кедровая бочка <i>30 мин</i></dt><dd>1 000 ₽</dd></div>
+          <div><dt>Скрабирование <i>15 мин</i></dt><dd>800 ₽</dd></div>
+          <div><dt>Обёртывание <i>30 мин</i></dt><dd>1 700 ₽</dd></div>
+          <div><dt>Лимфодренажное обёртывание <i>30 мин</i></dt><dd>1 700 ₽</dd></div>
+          <div><dt>Термоодеяло <i>30 мин</i></dt><dd>600 ₽</dd></div>
+          <div><dt>Спа-процедуры для тела <i>1 ч</i></dt><dd>5 000 ₽</dd></div>
+          <div><dt>Спа-процедуры <i>1 ч</i></dt><dd>4 500 ₽</dd></div>
+          <div><dt>Спа для лица <i>45 мин</i></dt><dd>2 400 ₽</dd></div>
+          <div><dt>Спа для рук <i>15 мин</i></dt><dd>900 ₽</dd></div>
+          <div><dt>Спа для ног <i>15 мин</i></dt><dd>900 ₽</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Кедровая бочка + как проходит сеанс -->
+  <section class="story">
+    <figure class="story__photo">
+      <img src="../img/kabinet-obshchij.jpg" width="827" height="604" loading="lazy" alt="Кабинет: столик с маслами, свечи и кедровые бочки">
+      <figcaption>Кабинет на проспекте Ветеранов: бочки, свечи, масла и душ за шторкой.</figcaption>
+    </figure>
+    <div class="story__text">
+      <h2 class="huge">Прогреть,<br>размять,<br>отдохнуть</h2>
+      <p class="dropcap">Кедровая бочка – мини-сауна из кедра. Вы сидите внутри, голова остаётся снаружи, поэтому нет тяжести, как в парилке. Пар на травах, 40–60 градусов, 30 минут. После неё массаж, скраб и обёртывание ощущаются сильнее.</p>
+      <ol class="steps">
+        <li>Напишите или позвоните – подберём время с 10 до 21.</li>
+        <li>Приходите на проспект Ветеранов, 169к6.</li>
+        <li>Душ, халат, полотенца – всё на месте.</li>
+        <li>Час или два только для вас.</li>
+      </ol>
+      <a class="oval" href="#zapis">Записаться</a>
+    </div>
+  </section>
+
+  <!-- Цифры -->
+  <section class="stats" aria-label="Арина в цифрах">
+    <p><small>рейтинг на Авито</small><span>Оценка</span><b>4,8</b></p>
+    <p><small>от гостей</small><span>Отзывов</span><b>40</b></p>
+    <p><small>в профессии</small><span>Лет</span><b>8+</b></p>
+    <p><small>каждый день</small><span>Часы</span><b>10–21</b></p>
+  </section>
+
+  <!-- Большая типографика -->
+  <section class="poster" aria-label="Ваше тело скажет спасибо">
+    <div class="poster__row">
+      <img src="../img/stol-polotenca.jpg" width="827" height="593" loading="lazy" alt="Массажный стол с валиками и полотенцами">
+      <span>Ваше</span>
+    </div>
+    <div class="poster__row poster__row--end">
+      <span>тело</span>
+      <img src="../img/dush.jpg" width="827" height="1071" loading="lazy" alt="Душевая кабина в кабинете">
+    </div>
+    <div class="poster__row">
+      <span class="poster__empty" aria-hidden="true"></span>
+      <span>скажет</span>
+    </div>
+    <div class="poster__row poster__row--box">
+      <span class="box">спасибо</span>
+      <p class="poster__note">С 2017 года Арина возвращает лёгкость уставшим спинам, плечам и ногам. <b>Документы и образование проверены Авито.</b> Школа мастеров массажа, курс массажиста и курс релакс-массажа.</p>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section class="reviews" id="otzyvy">
+    <h2 class="kicker kicker--big">Письма в редакцию</h2>
+    <div class="reviews__track" tabindex="0" aria-label="Отзывы с Авито, листайте вбок">
+      <blockquote class="note-card"><p>«Арина – профессионал своего дела! Приятное общение, комфортная обстановка. После массажа такая лёгкость в теле. Спина прошла. Теперь буду постоянным клиентом».</p><footer><span class="ava">Н</span><b>Надежда</b><small>спа-массаж, октябрь 2026</small></footer></blockquote>
+      <blockquote class="note-card"><p>«Приехал с забитыми мышцами и болью в пояснице – после массажа как заново родился! Были учтены все пожелания, приятная атмосфера».</p><footer><span class="ava">Ю</span><b>Юрий</b><small>массаж, февраль 2026</small></footer></blockquote>
+      <blockquote class="note-card"><p>«У Арины золотые руки! Сеанс пролетел как миг, за приятным разговором с отличным мастером своего дела. Обязательно ещё вернусь!»</p><footer><span class="ava">Г</span><b>Гость</b><small>массаж, сентябрь 2026</small></footer></blockquote>
+      <blockquote class="note-card"><p>«Обратился за классическим массажем. Хорошо расслабило и в то же время хорошо промяли спину. Спасибо!»</p><footer><span class="ava">Р</span><b>Роман</b><small>классический массаж, сентябрь 2026</small></footer></blockquote>
+      <blockquote class="note-card"><p>«Шикарный мастер, два часа пролетели незаметно. Ушёл расслабленный и счастливый, руки волшебные!»</p><footer><span class="ava">Д</span><b>Дмитрий</b><small>массаж 2 часа, май 2026</small></footer></blockquote>
+      <blockquote class="note-card"><p>«Сеанс проходил с утра, и весь день чувствую себя бодро. Мастер вежлива и тактична, цена соответствует».</p><footer><span class="ava">С</span><b>Сергей</b><small>массаж, сентябрь 2025</small></footer></blockquote>
+      <blockquote class="note-card"><p>«Подкупает качество массажа, лёгкость в общении, возможность принять душ. Обязательно буду посещать!»</p><footer><span class="ava">А</span><b>Андрей</b><small>массаж, декабрь 2025</small></footer></blockquote>
+      <blockquote class="note-card"><p>«Чувствую себя как после отпуска – отдохнувшим, полным сил и энергии. Время пролетело на одном дыхании».</p><footer><span class="ava">Д</span><b>Дмитрий</b><small>массаж, апрель 2025</small></footer></blockquote>
+    </div>
+    <p class="reviews__src">Отзывы взяты с Авито, где у Арины 4,8 из 5 по 40 оценкам.</p>
+  </section>
+
+  <!-- Противопоказания -->
+  <details class="contra">
+    <summary>Когда массаж и бочку лучше отложить</summary>
+    <p>Температура и простуда, острое воспаление, обострение хронических болезней, высыпания на коже, тромбоз, онкология, тяжёлая гипертония, беременность – без согласия врача. Не стоит плотно есть перед бочкой. Сомневаетесь – спросите при записи.</p>
+  </details>
+
+  <!-- Запись -->
+  <section class="contact" id="zapis">
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__line">
+        <span>Приходите отдохнуть</span><b class="box">Записаться</b><span>Приходите отдохнуть</span><b class="box">Записаться</b>
+        <span>Приходите отдохнуть</span><b class="box">Записаться</b><span>Приходите отдохнуть</span><b class="box">Записаться</b>
+      </div>
+    </div>
+    <div class="contact__grid">
+      <div>
+        <h2 class="huge">Запись</h2>
+        <p>Напишите, какой массаж хотите и когда удобно, – Арина ответит и подберёт время. Первый визит со скидкой 10%.</p>
+      </div>
+      <!-- ЗАГЛУШКИ: заменить телефон и ссылки на мессенджеры -->
+      <div class="contact__links">
+        <a class="oval oval--fill" href="tel:+70000000000">Позвонить</a>
+        <a class="oval" href="https://t.me/USERNAME" target="_blank" rel="noopener">Telegram</a>
+        <a class="oval" href="https://wa.me/70000000000" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <dl class="contact__info">
+        <div><dt>Адрес</dt><dd>Санкт-Петербург, проспект Ветеранов, 169к6, ЖК «Солнечный город»</dd></div>
+        <div><dt>Часы</dt><dd>Каждый день, 10:00–21:00</dd></div>
+        <div><dt>Телефон</dt><dd>+7 (000) 000-00-00</dd></div>
+        <div><dt>Карта</dt><dd><a href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%92%D0%B5%D1%82%D0%B5%D1%80%D0%B0%D0%BD%D0%BE%D0%B2%2C%20169%D0%BA6" target="_blank" rel="noopener">Открыть на Яндекс Картах</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>Арина © 2026</span>
+  <span>Массаж – не лечение. При заболеваниях посоветуйтесь с врачом.</span>
+</footer>
+
+<a class="sticky" href="#zapis">Записаться</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

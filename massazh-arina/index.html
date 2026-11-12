@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BadiCo – массаж и кедровая бочка в Солнечном городе, СПб</title>
+  <meta name="description" content="BadiCo – классический, расслабляющий и баночный массаж, кедровая бочка и спа-уход у мастера Арины. Проспект Ветеранов, 169к6, ЖК «Солнечный город», Санкт-Петербург. Ежедневно 10:00–21:00. Скидка 10% на первый визит.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#">BadiCo<span>массаж и спа</span></a>
+  <!-- ЗАГЛУШКА: заменить номер телефона -->
+  <a class="btn btn--small" href="#zapis">Записаться</a>
+</header>
+
+<main>
+
+  <!-- Первый экран -->
+  <section class="hero">
+    <div class="hero__text">
+      <p class="hero__place">ЖК «Солнечный город», Красносельский район</p>
+      <h1>Массаж и кедровая бочка в&nbsp;Солнечном городе</h1>
+      <p class="hero__lead">Приходите с усталой спиной – уходите с лёгкостью в теле. Тихий кабинет, душ, халат и мастер с опытом больше 8 лет.</p>
+      <div class="hero__actions">
+        <a class="btn" href="#zapis">Записаться на массаж</a>
+        <a class="link" href="#ceny">Посмотреть цены</a>
+      </div>
+      <ul class="hero__facts">
+        <li><b>4,8</b> рейтинг на Авито, 40 отзывов</li>
+        <li><b>−10%</b> на первый визит</li>
+        <li><b>10–21</b> каждый день</li>
+      </ul>
+    </div>
+    <figure class="hero__photo">
+      <!-- Фото: Unsplash (бесплатная лицензия). Лучше потом заменить на своё фото Арины за работой -->
+      <img
+        src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=70"
+        srcset="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=70 600w,
+                https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=70 900w,
+                https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1300&q=70 1300w"
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        width="900" height="1350"
+        alt="Женщина лежит на массажном столе, руки мастера массируют ей спину"
+        fetchpriority="high">    </figure>
+  </section>
+
+  <!-- Услуги и цены -->
+  <section class="section prices" id="ceny">
+    <div class="wrap">
+      <h2>Услуги и цены</h2>
+      <p class="section__lead">Новым клиентам – скидка 10% на первый сеанс. Скажите о ней при записи.</p>
+
+      <div class="price-groups">
+        <div class="price-group">
+          <h3>Массаж</h3>
+          <ul class="price-list">
+            <li>
+              <div class="price-list__name">Классический массаж<small>всё тело, проработка спины и шеи</small></div>
+              <span class="price-list__time">60 мин</span>
+              <span class="price-list__price">4 000 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Расслабляющий массаж<small>мягкий темп, чтобы снять стресс</small></div>
+              <span class="price-list__time">60 мин</span>
+              <span class="price-list__price">3 500 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Баночный массаж<small>вакуумные банки для спины и проблемных зон</small></div>
+              <span class="price-list__time">45 мин</span>
+              <span class="price-list__price">4 000 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Спортивный массаж<small>после тренировок, с перкуссионным массажёром</small></div>
+              <span class="price-list__time">60 мин</span>
+              <!-- ЗАГЛУШКА: уточнить цену -->
+              <span class="price-list__price price-list__price--ask">уточняйте</span>
+            </li>
+            <li>
+              <div class="price-list__name">Стоун-терапия<small>прогрев тела горячими камнями</small></div>
+              <span class="price-list__time">15 мин</span>
+              <span class="price-list__price">1 100 ₽</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="price-group">
+          <h3>Спа-уход</h3>
+          <ul class="price-list">
+            <li>
+              <div class="price-list__name">Кедровая бочка<small>мини-сауна с паром на травах</small></div>
+              <span class="price-list__time">30 мин</span>
+              <span class="price-list__price">1 000 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Скрабирование<small>мягкая кожа – лучше всего после бочки</small></div>
+              <span class="price-list__time">15 мин</span>
+              <span class="price-list__price">800 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Обёртывание</div>
+              <span class="price-list__time">30 мин</span>
+              <span class="price-list__price">1 700 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Лимфодренажное обёртывание<small>для лёгкости в теле</small></div>
+              <span class="price-list__time">30 мин</span>
+              <span class="price-list__price">1 700 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Термоодеяло<small>прогрев, усиливает эффект обёртывания</small></div>
+              <span class="price-list__time">30 мин</span>
+              <span class="price-list__price">600 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Спа-процедуры для тела</div>
+              <span class="price-list__time">1 ч</span>
+              <span class="price-list__price">5 000 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Спа-процедуры</div>
+              <span class="price-list__time">1 ч</span>
+              <span class="price-list__price">4 500 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Спа-процедуры для лица</div>
+              <span class="price-list__time">45 мин</span>
+              <span class="price-list__price">2 400 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Спа-процедуры для рук</div>
+              <span class="price-list__time">15 мин</span>
+              <span class="price-list__price">900 ₽</span>
+            </li>
+            <li>
+              <div class="price-list__name">Спа-процедуры для ног</div>
+              <span class="price-list__time">15 мин</span>
+              <span class="price-list__price">900 ₽</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+<p class="prices__note">Можно взять сеанс на 2 часа – многие так и делают.</p>
+    </div>
+  </section>
+
+  <!-- Кедровая бочка -->
+  <section class="section barrel">
+    <div class="wrap barrel__grid">
+      <div class="barrel__text">
+        <h2>Что такое кедровая бочка</h2>
+        <p>Это мини-сауна из кедра. Вы сидите внутри, а голова остаётся снаружи – поэтому дышится легко и не бывает тяжести, как в парилке. Внутрь подаётся пар на травах, 40–60 градусов. Сеанс – 30 минут.</p>
+        <p>Тело прогревается, мышцы отпускает, кожа становится мягкой. После бочки массаж, скраб и обёртывание ощущаются сильнее – поэтому их часто берут вместе.</p>
+        <p class="barrel__warn">Перед процедурой не стоит плотно есть. Если у вас есть хронические болезни, давление или беременность – сначала посоветуйтесь с врачом.</p>
+      </div>
+      <img class="barrel__img" src="img/stol-bochki.jpg" width="827" height="1093" loading="lazy" alt="Кедровые бочки, свечи, веники и масла для процедур">
+    </div>
+  </section>
+
+  <!-- Обо мне -->
+  <section class="section about" id="obo-mne">
+    <div class="wrap about__grid">
+      <img class="about__img" src="img/arina.jpg" width="826" height="1089" loading="lazy" alt="Арина делает массаж ног перкуссионным массажёром">
+      <div class="about__text">
+        <h2>Привет, я Арина</h2>
+        <p>С детства я понимаю людей через прикосновения: обнять, взять за руку – и уже понятно, как человек себя чувствует. Потом я работала тренером по растяжке и поняла, что больше всего хочу заниматься массажем.</p>
+        <p>На сеансе я сначала спрашиваю, что беспокоит и как вам комфортнее – сильнее или мягче. Работаю с женщинами и мужчинами.</p>
+        <dl class="about__list">
+          <div><dt>2017</dt><dd>Школа мастеров массажа, курс массажиста</dd></div>
+          <div><dt>2022</dt><dd>Там же – курс релакс-массажа</dd></div>
+          <div><dt>8+ лет</dt><dd>практики</dd></div>
+        </dl>
+        <p class="about__check">Документы и образование проверены Авито.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Фото кабинета -->
+  <section class="section gallery">
+    <div class="wrap">
+      <h2>Кабинет</h2>
+      <p class="section__lead">Всё рядом: массажный стол, душ, чистые полотенца и халаты. Одноразовые простыни – для каждого гостя новые.</p>
+    </div>
+    <div class="gallery__track" tabindex="0" aria-label="Фотографии кабинета, листайте вбок">
+      <img src="img/kabinet-bochka.jpg" width="827" height="1080" loading="lazy" alt="Кабинет Арины: кедровая бочка и два массажных стола">
+      <img src="img/massazhnyj-stol.jpg" width="827" height="1098" loading="lazy" alt="Массажный стол с одноразовой простынёй и полотенцами">
+      <img src="img/dush.jpg" width="827" height="1071" loading="lazy" alt="Душевая кабина рядом с массажным столом">
+      <img src="img/kabinet-obshchij.jpg" width="827" height="604" loading="lazy" alt="Кабинет: столик с маслами, свечи и кедровые бочки">
+      <img src="img/stol-polotenca.jpg" width="827" height="593" loading="lazy" alt="Массажный стол с валиками и свёрнутыми полотенцами">
+      <img src="img/stol-bochki.jpg" width="827" height="1093" loading="lazy" alt="Кедровые бочки и банные веники">
+    </div>
+  </section>
+
+  <!-- Как проходит сеанс -->
+  <section class="section steps">
+    <div class="wrap">
+      <h2>Как проходит сеанс</h2>
+      <ol class="steps__list">
+        <li><b>Запись.</b> Напишите или позвоните – подберём время с 10 до 21, в любой день.</li>
+        <li><b>Встреча.</b> Проспект Ветеранов, 169к6. Расскажу, как найти вход.</li>
+        <li><b>Душ и халат.</b> Можно принять душ до и после сеанса – всё есть на месте.</li>
+        <li><b>Массаж.</b> Сначала обсудим, что беспокоит, потом – час или два только для вас.</li>
+      </ol>
+      <details class="contra">
+        <summary>Когда массаж лучше отложить</summary>
+        <p>Температура и простуда, острое воспаление, обострение хронических болезней, кожные высыпания в зоне массажа, тромбоз, онкология, беременность (без согласия врача). Если сомневаетесь – спросите меня при записи.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Отзывы: карусель в ретро-стиле. Нажмите на карточку – отзыв откроется целиком -->
+  <section class="section reviews" id="otzyvy">
+    <div class="wrap">
+      <div class="reviews__head">
+        <h2>Что говорят гости</h2>
+        <p class="reviews__score"><b>4,8</b> из 5 – 40 отзывов на Авито</p>
+      </div>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel__track" tabindex="0" aria-label="Отзывы, листайте вбок">
+        <button class="t-card" type="button" data-initial="Н">
+          <span class="t-card__text">Арина – профессионал своего дела! Приятное общение, комфортная обстановка. Расслабилась на все 100. После массажа такая лёгкость в теле. Спина прошла. Рекомендую! Теперь буду постоянным клиентом.</span>
+          <span class="t-card__name">Надежда</span>
+          <span class="t-card__meta">спа-массаж, октябрь 2026</span>
+        </button>
+        <button class="t-card" type="button" data-initial="Ю">
+          <span class="t-card__text">Могу сказать: профессионал своего дела! Приехал с забитыми мышцами и болью в пояснице – после массажа как заново родился! Были учтены все пожелания, приятная атмосфера. Огромное спасибо! Ещё не раз обращусь!</span>
+          <span class="t-card__name">Юрий</span>
+          <span class="t-card__meta">массаж, февраль 2026</span>
+        </button>
+        <button class="t-card" type="button" data-initial="Г">
+          <span class="t-card__text">У Арины золотые руки! Сеанс массажа пролетел как миг, за приятным разговором с красивой девушкой и отличным мастером своего дела. Обязательно ещё вернусь!</span>
+          <span class="t-card__name">Гость</span>
+          <span class="t-card__meta">массаж, сентябрь 2026</span>
+        </button>
+        <button class="t-card" type="button" data-initial="Р">
+          <span class="t-card__text">Обратился за классическим массажем, Арина отличный специалист. Хорошо расслабило и в то же время хорошо промяли спину. Спасибо!</span>
+          <span class="t-card__name">Роман</span>
+          <span class="t-card__meta">классический массаж, сентябрь 2026</span>
+        </button>
+        <button class="t-card" type="button" data-initial="Д">
+          <span class="t-card__text">Шикарный мастер, два часа пролетели незаметно. После массажа ушёл расслабленный и счастливый, руки волшебные!</span>
+          <span class="t-card__name">Дмитрий</span>
+          <span class="t-card__meta">массаж 2 часа, май 2026</span>
+        </button>
+        <button class="t-card" type="button" data-initial="А">
+          <span class="t-card__text">Делала спортивный массаж. Результатом очень довольна, рекомендую.</span>
+          <span class="t-card__name">Анастасия</span>
+          <span class="t-card__meta">спортивный массаж, июнь 2026</span>
+        </button>
+        <button class="t-card" type="button" data-initial="С">
+          <span class="t-card__text">Услуга оказана в полном объёме, цена соответствует, мастер вежлива и тактична, всё понравилось. Сеанс проходил с утра, и весь день чувствую себя бодро. Спасибо мастеру!</span>
+          <span class="t-card__name">Сергей</span>
+          <span class="t-card__meta">массаж, сентябрь 2025</span>
+        </button>
+        <button class="t-card" type="button" data-initial="А">
+          <span class="t-card__text">Замечательный мастер своего дела! Подкупает качество массажа, лёгкость в общении, возможность принять душ. Обязательно буду посещать!</span>
+          <span class="t-card__name">Андрей</span>
+          <span class="t-card__meta">массаж, декабрь 2025</span>
+        </button>
+        <button class="t-card" type="button" data-initial="Д">
+          <span class="t-card__text">Спасибо за массаж! Было очень приятно. Чувствую себя как после отпуска – отдохнувшим, полным сил и энергии. Время пролетело на одном дыхании. Рекомендую!</span>
+          <span class="t-card__name">Дмитрий</span>
+          <span class="t-card__meta">массаж, апрель 2025</span>
+        </button>
+        <button class="t-card" type="button" data-initial="Д">
+          <span class="t-card__text">Ходил на двухчасовой сеанс. Массаж отличный. Мастер общительная и приятная девушка. Рекомендую.</span>
+          <span class="t-card__name">Дмитрий</span>
+          <span class="t-card__meta">массаж 2 часа, февраль 2026</span>
+        </button>
+        <button class="t-card" type="button" data-initial="А">
+          <span class="t-card__text">Спасибо огромное Арине. Расслабился и отдохнул. Рекомендую!</span>
+          <span class="t-card__name">Александр</span>
+          <span class="t-card__meta">массаж, июнь 2025</span>
+        </button>
+        <button class="t-card" type="button" data-initial="Н">
+          <span class="t-card__text">Всё отлично, уютное место, внимательный мастер.</span>
+          <span class="t-card__name">Николай</span>
+          <span class="t-card__meta">массаж, декабрь 2024</span>
+        </button>
+      </div>
+
+      <div class="carousel__nav wrap">
+        <button class="carousel__btn" type="button" data-dir="-1" aria-label="Предыдущие отзывы" disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="carousel__btn" type="button" data-dir="1" aria-label="Следующие отзывы">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Окно с полным отзывом -->
+    <dialog class="t-modal" aria-label="Отзыв целиком">
+      <div class="t-modal__box">
+        <button class="t-modal__close" type="button" aria-label="Закрыть отзыв">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <p class="t-modal__meta"></p>
+        <p class="t-modal__name"></p>
+        <svg class="t-modal__quote" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.76-2-2-2H4c-1.25 0-2 .75-2 1.97V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .01-1 1.03V20c0 1 0 1 1 1zM15 21c3 0 7-1 7-8V5c0-1.25-.76-2-2-2h-4c-1.25 0-2 .75-2 1.97V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <p class="t-modal__text"></p>
+      </div>
+    </dialog>
+  </section>
+
+<!-- Контакты и запись -->
+  <section class="section contact" id="zapis">
+    <div class="wrap contact__grid">
+      <div>
+        <h2>Записаться</h2>
+        <p class="section__lead">Напишите, какой массаж хотите и когда удобно, – отвечу и подберу время. Первый визит со скидкой 10%.</p>
+        <!-- ЗАГЛУШКИ: заменить телефон и ссылки на мессенджеры -->
+        <div class="contact__buttons">
+          <a class="btn" href="tel:+70000000000">Позвонить</a>
+          <a class="btn btn--ghost" href="https://t.me/USERNAME" target="_blank" rel="noopener">Написать в Telegram</a>
+          <a class="btn btn--ghost" href="https://wa.me/70000000000" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        </div>
+      </div>
+      <dl class="contact__info">
+        <div><dt>Адрес</dt><dd>Санкт-Петербург, проспект Ветеранов, 169к6<br>ЖК «Солнечный город», Красносельский район</dd></div>
+        <div><dt>Часы</dt><dd>Каждый день, 10:00–21:00</dd></div>
+        <div><dt>Телефон</dt><dd>+7 (000) 000-00-00</dd></div>
+        <div><dd><a class="link" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%92%D0%B5%D1%82%D0%B5%D1%80%D0%B0%D0%BD%D0%BE%D0%B2%2C%20169%D0%BA6" target="_blank" rel="noopener">Открыть на Яндекс Картах</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>BadiCo – массаж и спа в Солнечном городе, Санкт-Петербург. Мастер – Арина.</p>
+  <p>Массаж – не лечение. При заболеваниях посоветуйтесь с врачом.</p>
+</footer>
+
+<a class="sticky-cta" href="#zapis">Записаться</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

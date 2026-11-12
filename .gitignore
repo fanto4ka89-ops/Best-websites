@@ -1,0 +1,10 @@
+# Служебные заметки и настройки – не публикуем
+CLAUDE.md
+**/CLAUDE.md
+.claude/
+**/.claude/
+.env
+**/.env
+*.local
+Thumbs.db
+desktop.ini
