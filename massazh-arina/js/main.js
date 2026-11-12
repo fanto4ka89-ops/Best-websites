@@ -81,7 +81,7 @@ if (fineMouse && !calm) {
   let x = innerWidth / 2, y = innerHeight / 2;   // где мышь
   let rx = x, ry = y;                            // где кольцо (догоняет мягко)
   let scale = 1, targetScale = 1;
-  const hoverTargets = 'a, button, summary, .t-card';
+  const hoverTargets = 'a, button, summary, .t-card, .seal';
 
   document.addEventListener('mousemove', (e) => {
     x = e.clientX; y = e.clientY;
