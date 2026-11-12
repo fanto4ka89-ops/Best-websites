@@ -2,20 +2,97 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'unsafe-inline'; base-uri 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Главная страница репозитория: сразу ведёт на сайт массажа -->
-  <meta http-equiv="refresh" content="0; url=massazh-arina/">
-  <link rel="canonical" href="massazh-arina/">
-  <title>BadiCo – массаж и кедровая бочка в Солнечном городе</title>
-  <meta name="description" content="Переход на сайт BadiCo – массаж и спа в Солнечном городе, Санкт-Петербург.">
-  <link rel="icon" href="massazh-arina/img/favicon.svg" type="image/svg+xml">
+  <title>Best websites – портфолио сайтов</title>
+  <meta name="description" content="Сайты для мастеров и небольших студий: одностраничники с записью, ценами и отзывами.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f2420'/%3E%3Cpath d='M18 44V20h12a8 8 0 0 1 0 16H18' fill='none' stroke='%23e9c46a' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Golos+Text:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f6f0dc; color: #1e2b28; font: 18px/1.5 system-ui, sans-serif; text-align: center; padding: 16px; }
-    a { color: #9c5a28; font-weight: 700; }
+    :root {
+      --bg: #efece4;
+      --ink: #1f2420;
+      --soft: #5d6259;
+      --line: #cfc9bb;
+      --accent: #b5532f;
+      --gutter: 16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 400 17px/1.55 "Golos Text", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 var(--gutter); }
+
+    header { padding: 56px 0 40px; border-bottom: 1px solid var(--line); }
+    h1 {
+      font: 400 clamp(44px, 10vw, 104px)/1 "Literata", Georgia, serif;
+      letter-spacing: -.02em; margin: 0 0 20px; max-width: 12ch;
+    }
+    .lead { color: var(--soft); max-width: 46ch; margin: 0; font-size: 18px; }
+
+    .works { list-style: none; margin: 0; padding: 0; }
+    .work { border-bottom: 1px solid var(--line); }
+    .work a {
+      display: grid; gap: 20px; padding: 32px 0; text-decoration: none;
+    }
+    .work img {
+      display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center 40%; border-radius: 6px;
+      transition: transform .5s cubic-bezier(.2,.7,.2,1);
+    }
+    .work h2 {
+      font: 600 clamp(30px, 6vw, 48px)/1.05 "Literata", Georgia, serif;
+      margin: 0 0 10px; letter-spacing: -.01em;
+    }
+    .work p { margin: 0 0 14px; color: var(--soft); max-width: 44ch; }
+    .work .meta { font-size: 15px; color: var(--ink); }
+    .work .go {
+      display: inline-block; margin-top: 18px; font-weight: 500;
+      border-bottom: 2px solid var(--accent); padding-bottom: 2px;
+    }
+    @media (hover: hover) {
+      .work a:hover img { transform: scale(1.02); }
+      .work a:hover .go { color: var(--accent); }
+    }
+
+    .next { padding: 32px 0 64px; color: var(--soft); font-size: 15px; }
+
+    @media (min-width: 768px) {
+      :root { --gutter: 32px; }
+      header { padding: 96px 0 56px; }
+      .work a { grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; padding: 48px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { .work img { transition: none; } }
   </style>
 </head>
 <body>
-  <p>Открываем сайт BadiCo…<br>Если ничего не происходит – <a href="massazh-arina/">нажмите сюда</a>.</p>
+  <main class="wrap">
+    <header>
+      <h1>Сайты для тех, кто работает руками</h1>
+      <p class="lead">Одностраничники для мастеров и небольших студий: услуги, цены, отзывы и понятная кнопка записи.</p>
+    </header>
+
+    <ul class="works">
+      <li class="work">
+        <a href="https://massazh-badico.vercel.app/">
+          <img src="massazh-arina/img/massazh-ruki-700.jpg" width="700" height="1050" alt="Сайт BadiCo: руки мастера массируют спину">
+          <div>
+            <h2>BadiCo</h2>
+            <p>Массаж, кедровая бочка и спа-уход в Солнечном городе, Санкт-Петербург. Прайс из 15 услуг, отзывы с Авито в ретро-карусели, запись в одно касание.</p>
+            <span class="meta">Одностраничник, 2026</span><br>
+            <span class="go">Открыть сайт</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <p class="next">Скоро здесь появятся новые работы.</p>
+  </main>
 </body>
 </html>
