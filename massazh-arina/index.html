@@ -16,7 +16,13 @@
 <body>
 
 <header class="top">
-  <a class="logo" href="#">BadiCo<span>массаж и спа</span></a>
+  <div class="brand">
+    <a class="logo" href="#">BadiCo<span>массаж и спа</span></a>
+    <a class="brand__place" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%92%D0%B5%D1%82%D0%B5%D1%80%D0%B0%D0%BD%D0%BE%D0%B2%2C%20169%D0%BA6" target="_blank" rel="noopener" aria-label="Проспект Ветеранов, 169к6, ЖК «Солнечный город» – открыть на Яндекс Картах">
+      <svg class="brand__pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+      <span><b>пр. Ветеранов, 169к6</b>ЖК «Солнечный город»<span class="brand__area">, Красносельский район</span></span>
+    </a>
+  </div>
   <!-- ЗАГЛУШКА: заменить номер телефона -->
   <a class="btn btn--small" href="#zapis">Записаться</a>
 </header>
@@ -26,28 +32,34 @@
   <!-- Первый экран -->
   <section class="hero">
     <div class="hero__text">
-      <p class="hero__place">ЖК «Солнечный город», Красносельский район</p>
       <h1>Массаж и кедровая бочка в&nbsp;Солнечном городе</h1>
       <p class="hero__lead">Приходите с усталой спиной – уходите с лёгкостью в теле. Тихий кабинет, душ, халат и мастер с опытом больше 8 лет.</p>
       <div class="hero__actions">
         <a class="btn" href="#zapis">Записаться на массаж</a>
         <a class="link" href="#ceny">Посмотреть цены</a>
       </div>
-      <ul class="hero__facts">
-        <li><b>4,8</b> рейтинг на Авито, 40 отзывов</li>
-        <li><b>−10%</b> на первый визит</li>
-        <li><b>10–21</b> каждый день</li>
-      </ul>
+      <div class="hero__facts">
+        <a class="fact fact--rating" href="#otzyvy">
+          <span class="fact__stars" aria-hidden="true">★★★★★</span>
+          <span class="fact__big">4,8</span>
+          <span class="fact__note">40 отзывов<br>на Авито</span>
+        </a>
+        <div class="fact fact--hours">
+          <span class="fact__big">10:00–21:00</span>
+          <span class="fact__note">каждый день,<br>без выходных</span>
+        </div>
+      </div>
     </div>
     <figure class="hero__photo">
-      <!-- Фото: Unsplash (бесплатная лицензия), хранится в папке сайта. Лучше потом заменить на своё фото Арины за работой -->
       <img
-        src="img/massazh-ruki-1200.jpg"
-        srcset="img/massazh-ruki-700.jpg 700w, img/massazh-ruki-1200.jpg 1200w"
-        sizes="(min-width: 1024px) 50vw, 100vw"
-        width="1200" height="1800"
-        alt="Женщина лежит на массажном столе, руки мастера массируют ей спину"
+        src="img/massazh-spina.jpg"
+        width="572" height="1024"
+        alt="Женщина лежит на массажном столе, руки мастера массируют ей спину, рядом горят свечи"
         fetchpriority="high">
+      <figcaption class="seal">
+        <span class="seal__big">−10%</span>
+        <span class="seal__note">на первый<br>визит</span>
+      </figcaption>
     </figure>
   </section>
 

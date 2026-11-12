@@ -61,34 +61,104 @@ p { margin: 0 0 1em; max-width: 62ch; }
   background: rgba(246, 240, 220, .92);
   backdrop-filter: blur(8px);
 }
-.logo { font-family: var(--display); font-size: 28px; text-decoration: none; line-height: 1; }
-.logo span { display: block; font: 500 12px/1.4 var(--body); color: var(--soft); letter-spacing: .02em; }
+.top { flex-wrap: wrap; row-gap: 8px; }
+.brand { display: contents; }
+.logo { font-family: var(--display); font-size: 38px; text-decoration: none; line-height: .95; }
+.logo span { display: block; font: 600 13px/1.4 var(--body); color: var(--cedar); letter-spacing: .03em; margin-top: 2px; }
+
+/* Адрес рядом с логотипом – ссылка на карту */
+.brand__place {
+  order: 3; flex-basis: 100%;
+  display: flex; align-items: center; gap: 8px;
+  padding-top: 8px; border-top: 1px solid #d9cda8;
+  font-size: 13px; line-height: 1.3; color: var(--soft); text-decoration: none;
+}
+.brand__place b { font-weight: 700; color: var(--pine); margin-right: 6px; }
+.brand__place span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand__pin { flex: none; width: 18px; height: 18px; fill: var(--cedar); }
+.brand__pin circle { fill: var(--steam); }
+.brand__place:hover b { color: var(--cedar); text-decoration: underline; text-underline-offset: 3px; }
+
+@media (min-width: 768px) {
+  .top { flex-wrap: nowrap; }
+  .brand { display: flex; align-items: center; gap: 22px; }
+  .logo { font-size: 46px; }
+  .logo span { font-size: 14px; }
+  .brand__place {
+    order: 0; flex-basis: auto;
+    padding: 4px 0 4px 22px; border-top: 0; border-left: 1px solid #d9cda8;
+    font-size: 14px; gap: 10px;
+  }
+  .brand__place b { display: block; font-size: 16px; margin: 0 0 2px; }
+  .brand__place span { white-space: normal; }
+  .brand__pin { width: 22px; height: 22px; }
+}
 
 /* ===== Первый экран ===== */
-.hero { display: grid; gap: 28px; padding: 20px 0 0; }
+.hero { display: grid; gap: 28px; padding: 24px 0 0; }
 .hero__text { padding: 0 var(--gutter); }
-.hero__place { color: var(--cedar); font-weight: 700; font-size: 15px; margin-bottom: 14px; }
 .hero h1 { font-size: clamp(44px, 11vw, 92px); letter-spacing: -.01em; }
 .hero__lead { font-size: 18px; color: var(--soft); }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin: 26px 0 30px; }
+
+/* Рейтинг и часы работы */
 .hero__facts {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
-  font-size: 15px; line-height: 1.3; color: var(--soft);
+  display: grid; grid-template-columns: auto 1fr; align-items: stretch;
+  border-top: 1px solid #d9cda8; border-bottom: 1px solid #d9cda8;
 }
-.hero__facts b { display: block; font-family: var(--display); font-weight: 400; font-size: 40px; color: var(--pine); line-height: 1.05; margin-bottom: 4px; }
+.fact {
+  display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 12px;
+  padding: 16px 0; color: var(--pine); text-decoration: none;
+}
+.fact--hours { padding-left: 18px; margin-left: 18px; border-left: 1px solid #d9cda8; }
+.fact__stars { grid-column: 1 / -1; color: var(--honey); font-size: 15px; letter-spacing: 3px; line-height: 1; margin-bottom: 6px; }
+.fact__big { font-family: var(--display); font-size: 40px; line-height: 1; }
+.fact--hours .fact__big { grid-column: 1 / -1; font-size: 30px; margin-bottom: 4px; }
+.fact--hours .fact__note { grid-column: 1 / -1; }
+.fact__note { font-size: 14px; line-height: 1.3; color: var(--soft); }
+.fact--rating:hover .fact__note { color: var(--cedar); }
 @media (min-width: 1024px) {
-  .hero__facts { font-size: 17px; gap: 24px; }
-  .hero__facts b { font-size: 52px; }
+  .fact { padding: 20px 0; column-gap: 14px; }
+  .fact--hours { padding-left: 32px; margin-left: 32px; }
+  .fact__big { font-size: 56px; }
+  .fact--hours .fact__big { font-size: 40px; }
+  .fact__note { font-size: 15px; }
+  .fact__stars { font-size: 17px; }
 }
 
-.hero__photo { margin: 0; overflow: hidden; }
+.hero__photo { margin: 0; position: relative; }
 .hero__photo img { width: 100%; height: 72vh; min-height: 420px; max-height: 760px; object-fit: cover; object-position: center 45%; }
+
+/* Печать «−10%» на фото */
+.seal {
+  position: absolute; top: 20px; right: 16px;
+  width: 128px; height: 128px; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--cedar); color: var(--steam); text-align: center;
+  transform: rotate(-9deg);
+  box-shadow: 0 10px 28px rgba(60, 32, 10, .28);
+}
+.seal::before {
+  content: ""; position: absolute; inset: 7px; border-radius: 50%;
+  border: 1.5px dashed rgba(246, 240, 220, .6);
+}
+.seal__big { font-family: var(--display); font-size: 42px; line-height: 1; letter-spacing: -.01em; }
+.seal__note { font-size: 12px; font-weight: 700; line-height: 1.2; margin-top: 4px; color: #f3dfb7; }
+@media (min-width: 1024px) {
+  .seal { width: 168px; height: 168px; top: auto; bottom: 14%; right: auto; left: -64px; }
+  .seal::before { inset: 9px; }
+  .seal__big { font-size: 58px; }
+  .seal__note { font-size: 14px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .seal { animation: seal-in .7s cubic-bezier(.2, .9, .3, 1.3) .3s both; }
+  @keyframes seal-in { from { opacity: 0; transform: rotate(-30deg) scale(.6); } to { opacity: 1; transform: rotate(-9deg) scale(1); } }
+}
 
 /* ===== Цены ===== */
 .prices { background: var(--pine); color: var(--steam); }
 .prices .section__lead { color: #b9c4c0; }
-[id] { scroll-margin-top: 64px; }
+[id] { scroll-margin-top: 124px; }
 .price-groups { display: grid; gap: 40px; }
 .price-group h3 { margin: 0 0 6px; font: 700 14px/1.4 var(--body); color: var(--honey); letter-spacing: .02em; }
 .price-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid #3a4a46; }
@@ -326,3 +396,6 @@ html.cursor-hover .cursor-dot { opacity: 0; }
 /* Лёгкая «пульсация» кольца, как дыхание */
 @keyframes breathe { 50% { box-shadow: 0 0 0 6px rgba(232, 182, 90, .18); } }
 .cursor-ring { animation: breathe 2.4s ease-in-out infinite; }
+
+/* На узком телефоне район прячем, чтобы адрес влез в строку */
+@media (max-width: 479px) { .brand__area { display: none; } }
