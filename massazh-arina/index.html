@@ -199,14 +199,30 @@
       <h2>Кабинет</h2>
       <p class="section__lead">Всё рядом: массажный стол, душ, чистые полотенца и халаты. Одноразовые простыни – для каждого гостя новые.</p>
     </div>
-    <div class="gallery__track" tabindex="0" aria-label="Фотографии кабинета, листайте вбок">
-      <img src="img/kabinet-bochka.jpg" width="827" height="1080" loading="lazy" alt="Кабинет Арины: кедровая бочка и два массажных стола">
-      <img src="img/massazhnyj-stol.jpg" width="827" height="1098" loading="lazy" alt="Массажный стол с одноразовой простынёй и полотенцами">
-      <img src="img/dush.jpg" width="827" height="1071" loading="lazy" alt="Душевая кабина рядом с массажным столом">
-      <img src="img/kabinet-obshchij.jpg" width="827" height="604" loading="lazy" alt="Кабинет: столик с маслами, свечи и кедровые бочки">
-      <img src="img/stol-polotenca.jpg" width="827" height="593" loading="lazy" alt="Массажный стол с валиками и свёрнутыми полотенцами">
-      <img src="img/stol-bochki.jpg" width="827" height="1093" loading="lazy" alt="Кедровые бочки и банные веники">
+    <div class="gallery__track" tabindex="0" aria-label="Фотографии кабинета, листайте вбок, нажмите на фото, чтобы увеличить">
+      <button class="gallery__item" type="button"><img src="img/kabinet-bochka.jpg" width="827" height="1080" loading="lazy" alt="Кабинет Арины: кедровая бочка и два массажных стола"></button>
+      <button class="gallery__item" type="button"><img src="img/massazhnyj-stol.jpg" width="827" height="1098" loading="lazy" alt="Массажный стол с одноразовой простынёй и полотенцами"></button>
+      <button class="gallery__item" type="button"><img src="img/dush.jpg" width="827" height="1071" loading="lazy" alt="Душевая кабина рядом с массажным столом"></button>
+      <button class="gallery__item" type="button"><img src="img/kabinet-obshchij.jpg" width="827" height="604" loading="lazy" alt="Кабинет: столик с маслами, свечи и кедровые бочки"></button>
+      <button class="gallery__item" type="button"><img src="img/stol-polotenca.jpg" width="827" height="593" loading="lazy" alt="Массажный стол с валиками и свёрнутыми полотенцами"></button>
+      <button class="gallery__item" type="button"><img src="img/stol-bochki.jpg" width="827" height="1093" loading="lazy" alt="Кедровые бочки и банные веники"></button>
     </div>
+    <!-- Фото кабинета крупно -->
+    <dialog class="lightbox" aria-label="Фото кабинета крупно">
+      <figure class="lightbox__figure">
+        <img class="lightbox__img" alt="">
+        <figcaption class="lightbox__caption"><span class="lightbox__text"></span><span class="lightbox__count"></span></figcaption>
+      </figure>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Закрыть фото">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Предыдущее фото">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Следующее фото">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </dialog>
   </section>
 
   <!-- Как проходит сеанс -->

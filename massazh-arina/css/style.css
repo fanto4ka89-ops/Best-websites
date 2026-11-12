@@ -405,3 +405,71 @@ html.cursor-hover .cursor-dot { opacity: 0; }
 @media (hover: hover) {
   .seal:hover { scale: 1.1; box-shadow: 0 16px 36px rgba(60, 32, 10, .34); }
 }
+
+/* ===== Фото кабинета: нажатие – крупно ===== */
+.gallery__item {
+  flex: 0 0 auto; position: relative; padding: 0; border: 0; background: none;
+  border-radius: 8px; cursor: zoom-in; scroll-snap-align: start;
+}
+.gallery__item img { display: block; }
+/* Значок-лупа в углу – подсказка, что фото открывается */
+.gallery__item::after {
+  content: ""; position: absolute; right: 10px; bottom: 10px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(30, 43, 40, .72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f6f0dc' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6'/%3E%3Cpath d='M15 15l5 5M10.5 8v5M8 10.5h5'/%3E%3C/svg%3E") center / 20px no-repeat;
+  transition: transform .25s;
+}
+@media (hover: hover) {
+  .gallery__item:hover::after { transform: scale(1.12); }
+}
+
+body.has-lightbox { overflow: hidden; }
+.lightbox {
+  width: 100vw; height: 100dvh; max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0; background: transparent; color: var(--steam);
+}
+.lightbox::backdrop { background: rgba(20, 28, 26, .94); }
+.lightbox__figure {
+  height: 100%; margin: 0; padding: 64px 12px 16px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+}
+.lightbox__img {
+  max-width: 100%; max-height: calc(100dvh - 150px); width: auto; height: auto;
+  object-fit: contain; border-radius: 6px; touch-action: pan-y;
+}
+.lightbox__caption {
+  display: flex; gap: 16px; justify-content: space-between; align-items: baseline;
+  width: min(100%, 760px); font-size: 15px; line-height: 1.4; color: #d9d2bb;
+}
+.lightbox__count { flex: none; font-family: var(--display); font-size: 20px; color: var(--honey); }
+.lightbox__btn {
+  position: absolute; display: grid; place-items: center;
+  width: 48px; height: 48px; border: 0; border-radius: 50%;
+  background: rgba(246, 240, 220, .14); cursor: pointer; transition: background .2s;
+}
+.lightbox__btn:hover { background: rgba(246, 240, 220, .26); }
+.lightbox__btn svg { width: 24px; height: 24px; fill: none; stroke: var(--steam); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.lightbox__close { top: 12px; right: 12px; }
+.lightbox__prev, .lightbox__next { top: 50%; margin-top: -24px; }
+.lightbox__prev { left: 8px; }
+.lightbox__next { right: 8px; }
+/* На телефоне стрелки внизу, чтобы не закрывали фото; листать можно и свайпом */
+@media (max-width: 767px) {
+  .lightbox__figure { padding-bottom: 80px; }
+  .lightbox__img { max-height: calc(100dvh - 210px); }
+  .lightbox__prev, .lightbox__next { top: auto; bottom: 16px; margin-top: 0; }
+  .lightbox__prev { left: calc(50% - 60px); }
+  .lightbox__next { right: calc(50% - 60px); }
+}
+@media (min-width: 768px) {
+  .lightbox__figure { padding: 72px 96px 24px; }
+  .lightbox__img { max-height: calc(100dvh - 150px); }
+  .lightbox__close { top: 20px; right: 24px; }
+  .lightbox__prev { left: 24px; }
+  .lightbox__next { right: 24px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lightbox[open], .lightbox[open]::backdrop { animation: fade .25s ease-out; }
+  .lightbox__img.is-in { animation: lb-in .3s ease-out; }
+  @keyframes lb-in { from { opacity: 0; transform: scale(.97); } }
+}

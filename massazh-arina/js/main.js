@@ -64,6 +64,66 @@ if (modal && typeof modal.showModal === 'function') {
   });
 }
 
+// ===== Фото кабинета крупно =====
+const lightbox = document.querySelector('.lightbox');
+const shots = [...document.querySelectorAll('.gallery__item')];
+
+if (lightbox && shots.length && typeof lightbox.showModal === 'function') {
+  const big = lightbox.querySelector('.lightbox__img');
+  const text = lightbox.querySelector('.lightbox__text');
+  const count = lightbox.querySelector('.lightbox__count');
+  let current = 0;
+
+  const show = (i) => {
+    current = (i + shots.length) % shots.length;   // после последнего – снова первое
+    const small = shots[current].querySelector('img');
+    big.src = small.getAttribute('src');
+    big.alt = small.alt;
+    text.textContent = small.alt;
+    count.textContent = `${current + 1} из ${shots.length}`;
+    big.classList.remove('is-in');
+    void big.offsetWidth;                          // перезапуск мягкого появления
+    big.classList.add('is-in');
+  };
+
+  shots.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+      show(i);
+      document.body.classList.add('has-lightbox');
+      lightbox.showModal();
+    });
+  });
+
+  lightbox.querySelector('.lightbox__prev').addEventListener('click', () => show(current - 1));
+  lightbox.querySelector('.lightbox__next').addEventListener('click', () => show(current + 1));
+  lightbox.querySelector('.lightbox__close').addEventListener('click', () => lightbox.close());
+
+  // Клик по тёмному фону (мимо фото и кнопок) закрывает
+  lightbox.addEventListener('click', (e) => {
+    if (!e.target.closest('.lightbox__img, .lightbox__btn, .lightbox__caption')) lightbox.close();
+  });
+  // Стрелки на клавиатуре листают, Escape браузер закрывает сам
+  lightbox.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+  // Свайп пальцем влево-вправо
+  let startX = null;
+  big.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  big.addEventListener('touchend', (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) show(current + (dx < 0 ? 1 : -1));
+    startX = null;
+  });
+
+  lightbox.addEventListener('close', () => {
+    document.body.classList.remove('has-lightbox');
+    shots[current].focus();                        // возвращаемся к тому фото, на котором остановились
+    shots[current].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  });
+}
+
 // ===== Анимированный курсор =====
 // Работает только там, где есть мышь; на телефонах и при «уменьшить движение» – обычный курсор
 const fineMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
