@@ -1,13 +1,3 @@
-// Прячем нижнюю кнопку «Записаться», когда человек уже дошёл до блока записи
-const cta = document.querySelector('.sticky-cta');
-const contact = document.querySelector('#zapis');
-
-if (cta && contact && 'IntersectionObserver' in window) {
-  new IntersectionObserver(([entry]) => {
-    cta.classList.toggle('is-hidden', entry.isIntersecting);
-  }, { threshold: 0.15 }).observe(contact);
-}
-
 // ===== Карусель отзывов =====
 const track = document.querySelector('.carousel__track');
 const arrows = document.querySelectorAll('.carousel__btn');

@@ -313,25 +313,20 @@ body.has-modal { overflow: hidden; }
 }
 
 /* ===== Контакты ===== */
-.contact { padding-bottom: 110px; }
+.contact { padding-bottom: 72px; }
 .contact__grid { display: grid; gap: 36px; }
 .contact__buttons { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .contact__info { margin: 0; display: grid; gap: 18px; }
 .contact__info dt { font-size: 14px; color: var(--cedar); font-weight: 700; }
 .contact__info dd { margin: 2px 0 0; }
 
-.foot { background: var(--pine); color: #9fada9; padding: 28px var(--gutter) 96px; font-size: 14px; }
+.foot { background: var(--pine); color: #9fada9; padding: 28px var(--gutter); font-size: 14px; }
 .foot p { margin: 0 auto 6px; max-width: var(--max); }
 
-/* Кнопка записи внизу экрана на телефоне */
-.sticky-cta {
-  position: fixed; left: var(--gutter); right: var(--gutter); bottom: 14px; z-index: 20;
-  text-align: center; padding: 15px; border-radius: 999px;
-  background: var(--honey); color: var(--pine); font-weight: 700; text-decoration: none;
-  box-shadow: 0 6px 20px rgba(30, 43, 40, .3);
-  transition: transform .3s, opacity .3s;
+/* На телефоне «Записаться» всегда есть в шапке – вторую кнопку на первом экране прячем */
+@media (max-width: 767px) {
+  .hero__actions .btn { display: none; }
 }
-.sticky-cta.is-hidden { transform: translateY(120%); opacity: 0; pointer-events: none; }
 
 /* ===== Планшет ===== */
 @media (min-width: 768px) {
@@ -368,8 +363,6 @@ body.has-modal { overflow: hidden; }
   .contact { padding-bottom: 100px; }
   .gallery__track { padding-left: max(32px, calc((100vw - var(--max)) / 2 + 32px)); }
 
-  .sticky-cta { display: none; }
-  .foot { padding-bottom: 28px; }
 }
 
 /* ===== Анимированный курсор (только мышь на компьютере) ===== */
