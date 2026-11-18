@@ -123,6 +123,12 @@
     .hero__copy .v-lede { margin-top: var(--v-4); font-size: var(--v-t-base); }
   }
 
+  /* плашка демо для заказчика: снимается по «убери плашку демо» */
+  .demo-for { display: inline-flex; align-items: center; gap: .7em; align-self: flex-start; margin-bottom: var(--v-5); padding: .4em 1em .4em .4em; background: var(--v-surface); border: 1px solid var(--v-hair-strong); border-radius: 999px; box-shadow: var(--v-e1); font-size: var(--v-t-sm); line-height: 1.3; color: var(--v-ink-soft); max-width: 100%; }
+  .demo-for img { width: 40px; height: 40px; border-radius: 50%; flex: none; object-fit: cover; }
+  .demo-for b { color: var(--v-ink); font-weight: 600; }
+  @media (max-width: 860px) { .demo-for { margin-bottom: var(--v-3); font-size: .9375rem; padding: .3em .8em .3em .3em; } .demo-for img { width: 34px; height: 34px; } }
+
   /* ---- 2 · для кого -------------------------------------------------------------- */
   .komu { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: var(--v-8) var(--v-9); align-items: center; }
   .komu__copy .v-label { display: block; margin-bottom: var(--v-5); }
@@ -376,6 +382,7 @@
         </div>
 
         <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.5 0 0.1">
+          <p class="demo-for"><img src="assets/zakazchik.jpg" alt="" width="40" height="40"><span><b>Демо-сайт</b> для Сергея Львовича · курс по кибербезопасности для пенсионеров</span></p>
           <p class="hero__label">Курс по безопасности в телефоне и интернете</p>
           <h1 class="v-display v-display--xl" data-v-kinetic="lines">Курс для пенсионеров: как не&nbsp;попасться мошенникам</h1>
           <p class="v-lede">Простые уроки о том, как звонят, пишут и обманывают в интернете – и что делать в каждом случае.</p>
